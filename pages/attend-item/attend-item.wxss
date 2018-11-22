@@ -1,0 +1,98 @@
+/* pages/attend-item/attend-item.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  background:url('http://192.168.11.47/playgame/res/img/mybg.jpg') no-repeat left top;
+  background-size: cover;
+  position: relative;
+}
+.title{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: white;
+  font-size: 32rpx;
+  text-align: center;
+  display: block;
+  letter-spacing: 3rpx;
+}
+.scroll{
+  position: absolute;
+  top: 80rpx;
+  left: 26rpx;
+  width: 700rpx;
+  bottom: 140rpx;
+}
+.scroll .item{
+  padding: 15rpx 0;
+  height: 105rpx;
+  width: 100%;
+  background: white;
+   border-radius: 10rpx;
+   margin-bottom: 25rpx;
+}
+.itemImg{
+  width: 105rpx;
+  height: 105rpx;
+  padding:  0 25rpx;
+  float: left;
+}
+.itemImg image{
+  width: 35rpx;
+  height: 35rpx;
+  float: left;
+}
+.itemInfo{
+  width: 350rpx;
+  height: 105rpx;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.itemInfo text{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.itemInfo text:nth-of-type(1){
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.itemInfo text:nth-of-type(2){
+  font-size: 28rpx;
+  color: #ccc
+}
+.item button{
+  width: 150rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background: #ecd3b5;
+  font-size: 28rpx;
+  float: right;
+  margin-right: 25rpx;
+   margin-top: 20rpx;
+}
+.item button::after{
+  border: none;
+}
+.createTeam{
+  color: white;
+  font-size: 32rpx;
+  letter-spacing: 3rpx;
+  text-align: center;
+  background: #55a546;
+  border-radius: 8rpx;
+  position: absolute;
+  bottom: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 700rpx;
+  left: 25rpx;
+}
+.createTeam image{
+  width: 44rpx;
+  height: 34rpx;
+  vertical-align:-3rpx;
+  margin-right: 15rpx;
+}

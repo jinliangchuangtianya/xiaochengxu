@@ -1,0 +1,152 @@
+<!--pages/attend-item/attend-item.wxml-->
+<text class='title'>我参与的战队</text>
+<scroll-view class='scroll' scroll-y>
+   <view class='item'>
+      <view class='itemImg'>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+      </view>
+      <view class='itemInfo'>
+        <text>战队名称</text>
+        <text>排名 2</text>
+      </view>
+      <button>进入战队</button>
+   </view>
+   <view class='item'>
+      <view class='itemImg'>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+      </view>
+      <view class='itemInfo'>
+        <text>战队名称</text>
+        <text>排名 2</text>
+      </view>
+      <button>进入战队</button>
+   </view>
+   <view class='item'>
+      <view class='itemImg'>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+      </view>
+      <view class='itemInfo'>
+        <text>战队名称</text>
+        <text>排名 2</text>
+      </view>
+      <button>进入战队</button>
+   </view>
+   <view class='item'>
+      <view class='itemImg'>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+      </view>
+      <view class='itemInfo'>
+        <text>战队名称</text>
+        <text>排名 2</text>
+      </view>
+      <button>进入战队</button>
+   </view>
+   <view class='item'>
+      <view class='itemImg'>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+      </view>
+      <view class='itemInfo'>
+        <text>战队名称</text>
+        <text>排名 2</text>
+      </view>
+      <button>进入战队</button>
+   </view>
+   <view class='item'>
+      <view class='itemImg'>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+      </view>
+      <view class='itemInfo'>
+        <text>战队名称</text>
+        <text>排名 2</text>
+      </view>
+      <button>进入战队</button>
+   </view>
+   <view class='item'>
+      <view class='itemImg'>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+      </view>
+      <view class='itemInfo'>
+        <text>战队名称</text>
+        <text>排名 2</text>
+      </view>
+      <button>进入战队</button>
+   </view>
+   <view class='item'>
+      <view class='itemImg'>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+      </view>
+      <view class='itemInfo'>
+        <text>战队名称</text>
+        <text>排名 2</text>
+      </view>
+      <button>进入战队</button>
+   </view>
+   <view class='item'>
+      <view class='itemImg'>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+        <image src='/img/avatar.jpeg'></image>
+      </view>
+      <view class='itemInfo'>
+        <text>战队名称</text>
+        <text>排名 2</text>
+      </view>
+      <button>进入战队</button>
+   </view>
+</scroll-view>
+<button class='createTeam bottomGroup' open-type='share'>
+  <image src='/img/forward.png'></image>
+  <text>创建新战队</text>
+</button>

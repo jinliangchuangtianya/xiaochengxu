@@ -1,0 +1,129 @@
+/* pages/finger-guessing/finger-guessing.wxss */
+page{
+  background: #f1f1f1;
+}
+.banner{
+  width: 750rpx;
+}
+.title{
+  height: 130rpx;
+  margin-top: 10rpx;
+  background: white;
+  box-sizing: border-box;
+  padding:15rpx;
+  margin-bottom: 15rpx;
+}
+.left{
+  width: 432rpx;
+  height: 100rpx;
+  float: left;
+}
+.right{
+  width: 288rpx;
+  height: 80rpx;
+  float: left;
+  border-left: 2px solid #dadada;
+  margin-top: 10rpx;
+  box-sizing: border-box;
+  padding-left: 15rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size:30rpx;
+  font-weight: bold;
+}
+.left image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-top: 10rpx;
+  float: left;
+}
+.left text{
+  width: 352rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  line-height: 100rpx;
+  padding: 0 15rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  float: left;
+  box-sizing: border-box;
+}
+.right image:nth-of-type(1){
+  width:58rpx;
+  height:62rpx;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+}
+.right image:nth-of-type(2){
+  width:17rpx;
+  height: 33rpx;
+}
+.listGroup{
+  width: 750rpx;
+  height: 130rpx;
+  position: relative;
+  margin-bottom: 15rpx;
+}
+.listWrap{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 850rpx;
+  height: 130rpx;
+  display: flex;
+  justify-content: space-between; 
+}
+.list{
+  width: 720rpx;
+  height: 130rpx;
+  margin: 0 15rpx 15rpx 15rpx;
+  background: white;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 15rpx;
+}
+.list image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.list>view{
+  height: 80rpx;
+  width: 500rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 15rpx;
+}
+.infoTitle{
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.infoText{
+  font-size: 26rpx;
+  color: #c9c9c9;
+  font-weight: bold;
+}
+.time{
+  font-size: 24rpx;
+  color: #c9c9c9;
+  position: relative;
+  top: -20rpx;
+}
+.dele{
+  width: 100rpx;
+  height: 130rpx;
+  line-height: 130rpx;
+  text-align: center;
+  color: red;
+  font-size: 30rpx;
+  background: white;
+  border-radius: 10rpx;
+}

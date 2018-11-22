@@ -1,0 +1,131 @@
+/* pages/rank/rank.wxss */
+page{
+  background: #141213;
+}
+.rankTop{
+  width: 100%;
+  height: 515rpx;
+  background:url('http://192.168.11.47/playgame/res/img/paiming.png') no-repeat left top;
+  background-size: 100% 100%;
+  position: relative;
+}
+.rankTop view:nth-of-type(1){
+  width: 120rpx;
+  height: 120rpx;
+  padding: 6rpx;
+  background:url('http://192.168.11.47/playgame/res/img/touxkuang.png') no-repeat left top;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 155rpx;
+  top: 190rpx;
+}
+.rankTop view image{
+  width: 100%;
+  height: 100%;
+}
+.rankTop view:nth-of-type(2){
+  width: 140rpx;
+  height: 140rpx;
+  position: absolute;
+  left: 457rpx;
+  top: 198rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.rankTop view:nth-of-type(3){
+  position: absolute;
+  bottom: 72rpx;
+  width: 100%;
+  height: 45rpx;
+  box-sizing: border-box;
+  padding: 0 80rpx;
+}
+.rankTop view:nth-of-type(3) text{
+  display: inline-block;
+  height: 45rpx;
+  width: 260rpx;
+  text-align: center;
+  line-height: 45rpx;
+  font-size: 30rpx;
+  color: #c7be9f;
+  background: #313848;
+  border-radius: 25rpx;
+  padding: 0 25rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.rankTop view:nth-of-type(3) text:nth-of-type(1){
+  margin-right: 30rpx;
+}
+.rankTop view:nth-of-type(3) text:nth-of-type(2){
+  margin-left: 30rpx;
+}
+.tips{
+  width: 100%;
+  color: #ddc7a2;
+  height: 105rpx;
+  line-height: 105rpx;
+  border-bottom: 1px solid #232122;
+  font-size: 30rpx;
+  padding: 0 25rpx;
+  box-sizing: border-box;
+}
+.tips image{
+  width: 339rpx;
+  height: 36rpx;
+  vertical-align: middle;
+  margin-left: 15rpx;
+}
+.tips text:nth-of-type(2){
+  float: right;
+}
+.itemList{
+  height: 80rpx;
+  border-bottom: 1px solid #232122;
+   line-height: 80rpx;
+   padding: 0 25rpx;
+  box-sizing: border-box;
+}
+.itemList text{
+  float: left;
+}
+.itemList .name{
+   font-size: 30rpx;
+   color: white;
+   width: 415rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.itemList .num{
+   font-size: 34rpx;
+   color: #e4b45f;
+   float: right;
+   font-family: ' font-family';
+   font-weight: bold;
+   height: 80rpx;
+   width: 200rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  text-align: right;
+}
+.itemList .rank{
+   font-size: 34rpx;
+   color: #676566;
+   font-family: ' font-family';
+   font-weight: bold;
+   margin-right: 20rpx;
+   height: 80rpx;
+   width: 50rpx;
+   text-align: center;
+}
+.itemList image{
+   width: 50rpx;
+   height: 50rpx;
+   margin-top: 15rpx;
+   float: left;
+   margin-right: 20rpx;
+}

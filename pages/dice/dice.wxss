@@ -1,0 +1,89 @@
+/* pages/dice/dice.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  background:url('http://192.168.11.47/playgame/res/img/bg.jpg') no-repeat left top;
+  background-size: cover
+}
+.dice{
+  width: 118rpx;
+  height: 118rpx;
+  position: absolute;
+  left: 750rpx;
+  top: 45%;
+}
+.setBtn{
+  width: 78rpx;
+  height: 78rpx;
+  position: absolute;
+  left: 40rpx;
+  bottom: 40rpx;
+}
+.diceView{
+  width: 700rpx;
+  height: 230rpx;
+  position: absolute;
+  bottom: 30%;
+  left: 25rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.diceView>view{
+  width: 100%;
+  height: 106rpx;
+}
+.diceView>view:nth-of-type(1){
+   color: #f7efe4;
+   background: rgba(0, 0, 0, 0.2);
+   border-radius: 10rpx;
+   box-sizing: border-box;
+   border: 1rpx solid #a3948d;
+}
+.Run{
+  background: white;
+  width: 100%;
+  height: 106rpx;
+  border-radius: 10rpx;
+  line-height: 106rpx;
+  text-align: center;
+  font-size: 30rpx;
+}
+.title{
+  float: left;
+  width: 325rpx;
+  text-align: center;
+  line-height: 106rpx;
+  font-size: 30rpx;
+}
+.diceCount{
+  float: left;
+  width: 325rpx;
+  height: 106rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.diceCount image{
+  width: 48rpx;
+  height: 48rpx;
+}
+.diceCount text{
+  float: left;
+}
+.Run image{
+  width: 60rpx;
+  height: 69rpx;
+  vertical-align: middle;
+  position: relative;
+  top: -5rpx;
+}
+.button-hover{
+  background: rgba(255, 255, 255, 0.5)
+}
+.show{
+  display: flex;
+}
+.hide{
+  display: none;
+}

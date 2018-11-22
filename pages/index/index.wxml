@@ -1,0 +1,51 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view> -->
+  <view class="group group1" bindgetuserinfo="getUserInfo">
+    <view class='Woodfish'>
+      <button class='getUserInfoBtn' open-type="getUserInfo" bindgetuserinfo="getUserInfo" data-gameid="woodfish">
+          <image src='/img/tomuyu.png'></image>
+      </button>
+    </view>
+    <view class='rightGroup'>
+      <view class='user'>
+        <image class='users_img' src="{{userInfo.avatarUrl}}"></image>
+        <button class="userinfo-nickname" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 请先登录 </button>
+        <block wx:else>
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+        <image class='background' src='/img/user.png'></image>
+      </view>
+      <view class='finger-guessing'>
+       <button class='getUserInfoBtn' open-type="getUserInfo" bindgetuserinfo="getUserInfo" data-gameid="finger-guessing">
+          <image src='/img/tojdstb1.png'></image>
+        </button>
+      </view>
+    </view>
+  </view>
+   <view class="group group2">
+    <view class='group2Left'>
+      <view class='dice'>
+        <button class='getUserInfoBtn' open-type="getUserInfo" bindgetuserinfo="getUserInfo" data-gameid="dice">
+          <image src='/img/sz_03.png'></image>
+        </button>
+      </view>
+      <view class='Truewords'>
+        <button class='getUserInfoBtn' open-type="getUserInfo" bindgetuserinfo="getUserInfo" data-gameid="truewords">
+          <image src='/img/zxh_08.png'></image>
+         </button>
+      </view>
+    </view>
+    <view class='group2right'>
+       <button class='getUserInfoBtn' open-type="getUserInfo" bindgetuserinfo="getUserInfo" data-gameid="more">
+        <image src='/img/hwlog.png'></image>
+       </button>
+    </view>
+  </view>
+</view>

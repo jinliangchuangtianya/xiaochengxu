@@ -1,0 +1,54 @@
+<view class="container">
+    <view class='menuGroup'>
+      <view class='menuLeft'>
+        <view class='leftTop left' bindtap='gotoPage' data-page='rank'>
+          <image src='/img/cup.png'></image>
+          <text>排行榜</text>
+        </view>
+        <view class='leftbottom left' bindtap='gotoPage' data-page='index'>
+           <image src='/img/home.png'></image>
+           <text>主页</text>
+        </view>
+      </view>
+      <view class='scoreGroup'>
+        <text class='score'>{{score}}</text>
+        <view class='zhuzhan'>助战模式</view>
+      </view>
+      <view class='menuRight' bindtap='changeMusic'>
+        <image src='/img/music.png'></image>
+        <text>换音乐</text>
+      </view>
+    </view>
+    <view class='muyu' bindtap='addScore'>
+      <image src='/img/qmy.png' animation="{{animation}}"></image>
+      <image src='/img/qmy.png'></image>
+    </view>
+
+    <!-- 创建战队 -->
+    <!-- <button class='createTeam bottomGroup' open-type='share'>
+      <image src='/img/forward.png'></image>
+      <text>创建新战队</text>
+    </button> -->
+    <block style="height：100%">
+      <view class='messageGroup'>
+        <view class='{{mesToggle}}' wx:for="{{showMesList}}" wx:key="{{index}}">{{item.nickName}}:{{item.mes}}</view>
+      </view>
+      <view class='message bottomGroup'>
+          <view class='mes' bindtap='showMes'>
+            <image src='/img/mes.png'></image>
+            <text>{{messageTotal}}</text>
+          </view>
+          <view class='team' bindtap='gotoPage' data-page='war-team'>
+            <image src='/img/team.png'></image>
+            <text>{{teamTitle}}</text>
+            <text>({{teamMember}})</text>
+            <image src='/img/next.png'></image>
+          </view>
+      </view>
+      
+      <view class="MessBoardGroup" animation="{{animation2}}">
+        <message-board bindclosehandle='closeMessBoard' mesList='{{mesList}}'bindgetMoremesList='getMoremesList' bindtoggleShowMes='toggleShowMes'></message-board>
+      </view>
+    </block> 
+    
+</view>

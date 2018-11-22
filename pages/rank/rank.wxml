@@ -1,0 +1,27 @@
+<!--pages/rank/rank.wxml-->
+<view class='rankTop'>
+  <view>
+      <image src='/img/avatar.jpeg'></image>
+  </view>
+  <view>
+    <image src='/img/avatar.jpeg'></image>
+  </view>
+  <view>
+     <text>第一</text>
+     <text>呵呵呵</text>
+  </view>
+</view>
+ <view class='tips'>
+    <text>排名  战队</text>
+    <image src='/img/tips.png'></image>
+    <text>次数</text>
+</view>
+<view class='itemList' wx:for="{{itemList}}" wx:key="index">
+   
+   <image wx:if="{{index+1 == 1}}" src='/img/1.png'></image>
+   <image wx:elif="{{index+1 == 2}}" src='/img/2.png'></image>
+   <image wx:elif="{{index+1 == 3}}" src='/img/3.png'></image>
+   <text  wx:else class='rank'>{{index+1}}</text>
+   <text class='name'>{{item.nickName}}</text>
+   <text class='num'>{{item.total}}</text>
+</view>

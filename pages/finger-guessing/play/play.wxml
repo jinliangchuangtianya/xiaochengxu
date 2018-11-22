@@ -1,0 +1,7 @@
+<!--pages/finger-guessing/play/play.wxml-->
+<!-- <view bindtap='createPoster'>对战海报</view> -->
+<view class='bg'></view>
+<canvas wx:if="{{showCanvas}}" canvas-id="mycanvas" class='canvas' 
+ style='width:{{width}}px;height:{{height}}px'/>
+
+<button class='crearePoster' open-type='getUserInfo' bindgetuserinfo='getUserInfo'>生成海报</button>

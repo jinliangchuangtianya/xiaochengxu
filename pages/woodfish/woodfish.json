@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "无聊木鱼",
+  "usingComponents": {
+    "message-board": "/components/message-board/message-board"
+  },
+  "disableScroll":true
+}

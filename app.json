@@ -1,0 +1,24 @@
+{
+  "pages": [
+   
+    "pages/finger-guessing/play/play",
+    "pages/finger-guessing/finger-guessing",
+    "pages/index/index",
+    "pages/truewords/truewords",
+    "pages/dice/dice",
+    "pages/attend-item/attend-item",
+    "pages/woodfish/woodfish",
+    "pages/rank/rank",
+    "pages/musicList/musicList",
+    "pages/logs/logs",
+    "pages/more/more",
+    "pages/war-team/war-team"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}

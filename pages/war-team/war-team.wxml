@@ -1,0 +1,38 @@
+<!--pages/war-team/war-team.wxml-->
+<view class='itemGroup'>
+  <view class='title'>
+    <input type='text' bindtap='isChange' bindfocus='onfocus' bindblur='onblur' disabled='{{isDisabled}}' value='{{itemName}}'></input>
+    <view class='changeItem' bindtap='changeItem'>换战队</view>
+  </view>
+  <view class='itemInfo'>
+    <view>
+      <text>{{currentClickNum}}</text>
+      <text>今日敲击次数</text>
+    </view>
+    <view>
+       <text>{{totalClickNum}}</text>
+       <text>共敲击次数</text>
+    </view>
+    <view>
+      <text>{{rank}}</text>
+      <text>全球排名</text>
+    </view>
+  </view>
+  <view class='notice'>
+    <image src='/img/lb.png'></image>
+    <text>更多精彩，尽在评论区</text>
+  </view>
+  <scroll-view class='scroll' scroll-y bindscrolltolower="lower">
+    <view class='user' wx:for='{{userList}}' wx:key="index">
+      <view class='userInfo'>
+        <image src='{{item.avatarUrl}}'></image>
+        <text>{{item.total}}</text>
+      </view>
+      <text>{{item.nickName}}</text>
+    </view>
+  </scroll-view>
+  <view class='btns'>
+    <button type="primary" size='mini'>助战</button>
+    <button type="primary" size='mini' open-type='share'><image src='/img/add.png'></image>创建我的战队</button>
+  </view>
+</view>

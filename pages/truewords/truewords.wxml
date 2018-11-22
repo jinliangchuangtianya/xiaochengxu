@@ -1,0 +1,12 @@
+<!--pages/truewords/truewords.wxml-->
+<view class='swiper swiper1'>
+  <view class='wrap {{move ? "run" : ""}}'>
+    <view class='item' wx:for="{{words}}" wx:key="words.id">{{item.title}}</view>
+  </view>
+</view>
+<view class='swiper swiper2'>
+  <view class='wrap {{move ? "run2" : ""}}'>
+    <view class='item' wx:for="{{risk}}" wx:key="words.id">{{item.title}}</view>
+  </view>
+</view>
+<image class='btn' bindtap='move' src='{{src}}'></image>

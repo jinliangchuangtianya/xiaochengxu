@@ -1,0 +1,10 @@
+<scroll-view scroll-y style="height: 100%">
+   <view class='scroll-view-item {{index==selectIndex? "active" :""}}' wx:for="{{musicList}}" wx:for-index="index" wx:for-item="item" wx:key="item.url" 
+   bindtap='SelectMusic'
+   data-url="{{index}}"
+   >
+      <text class='num'>{{index +1}}</text>
+      <text class='name'>{{item.name}}</text>
+   </view>
+</scroll-view>
+

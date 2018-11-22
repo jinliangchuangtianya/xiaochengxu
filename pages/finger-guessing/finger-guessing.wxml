@@ -1,0 +1,27 @@
+<!--pages/finger-guessing/finger-guessing.wxml-->
+<image bindtap='gotoPlay' class='banner' src='{{avatarUrl}}'></image>
+<view class='title'>
+  <view class='left'>
+    <image src='/img/avatar.jpeg'></image>
+    <text>{{nickName}}</text>
+  </view>
+  <view class='right'>
+    <image src='/img/finger-guessing/icon-chengxin-small.png'></image>
+    <text>{{num}}%</text>
+    <image src='/img/finger-guessing/next.png'></image>
+  </view>
+</view>
+<view class='listGroup' wx:for="{{list}}" wx:key="index">
+  <view class='listWrap' bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="touchend" data-index="{{index}}" style='{{item.style}}'>
+    <view class='list'>
+      <image src='/img/avatar.jpeg'></image>
+      <view class='info'>
+        <text class='infoTitle'>{{item.title}}</text>
+        <text class='infoText'>最新惩罚：{{item.mes}}</text>
+      </view>
+      <text class='time'>{{item.time}}</text>
+    </view>
+    <view class='dele' bindtap='dele' data-index="{{index}}">删除</view>
+  </view>
+  </view>
+  

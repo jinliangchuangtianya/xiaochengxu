@@ -1,0 +1,19 @@
+<!--pages/dice/dice.wxml-->
+<image wx:for="{{diceLeng}}" wx:key="index" class='dice' src='{{item.src}}' animation="{{item.animation}}"></image>
+
+<!-- <button bindtap='goBack'>回去</button> -->
+<view class='diceView {{mark == false ? "hide":"show"}}'>
+  <view>
+    <text class='title'>筛子数量</text>
+    <view class='diceCount'>
+      <image style='opacity: {{addOpacity? 1 :.3}}' bindtap='changeDiceCount' src='/img/dice/btn_jia.png' data-even="add"></image>
+      <text>{{diceCount}}</text>
+      <image style='opacity: {{redOpacity? 1 :.3}}' bindtap='changeDiceCount' src='/img/dice/btn_jian.png' data-even="reduce"></image>
+    </view>
+  </view>
+  <button class='Run' bindtap='hideMark'>
+    <image src='/img/dice/phone.png'></image>
+    骰子摇起来
+  </button>
+</view>
+<image bindtap='changeDiceCount' class='setBtn' src='/img/dice/shezhi.png' bindtap='showMark'></image>

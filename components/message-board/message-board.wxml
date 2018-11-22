@@ -1,0 +1,22 @@
+<view class='messageBoard' animation="{{animation}}">
+    <view class='title'>
+      <image wx:if='{{isShowMes}}' src='/img/dmk.png' bindtap='toggleShowMes'></image>
+      <image wx:else src='/img/dmg.png' bindtap='toggleShowMes'></image>
+      <text>0条留言</text>
+      <image src='/img/close.png' bindtap='close'></image>
+    </view>
+     <scroll-view class='scroll' scroll-y bindscrolltolower="lower">
+        <view class='mesItem' wx:for="{{mesList}}" wx:key="index">
+          <image src='{{item.avatarUrl}}'></image>
+          <view class='mesInfo'>
+            <text>{{item.nickName}}</text>
+            <text>{{item.mes}}</text>
+            <text>{{item.time}}</text>
+          </view>
+        </view>
+    </scroll-view>
+    <view class='bottom'>
+      <textarea placeholder="请输入内容" placeholder-class="text" cursor-spacing="10"></textarea>
+      <button type='primary' size='mini'>发送</button>
+    </view>
+</view>

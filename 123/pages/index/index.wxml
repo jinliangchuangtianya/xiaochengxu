@@ -1,5 +1,0 @@
-<!--index.wxml-->
-<!--pages/dis_dil/dis_d5.wxml-->
-<canvas canvas-id="mycanvas" class='canvas' id="mycanvas" 
- style='width:{{width}}px;height:{{height}}px'/>
-
