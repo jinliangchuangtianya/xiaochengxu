@@ -1,7 +1,51 @@
 <!--pages/finger-guessing/play/play.wxml-->
 <!-- <view bindtap='createPoster'>对战海报</view> -->
-<view class='bg'></view>
+<view class='bg'>
+  <view class='top'>
+    <text>{{lostMes}}</text>
+    <image class='more' bindtap='showList' src='/img/finger-guessing/fg_more_punishment.png'></image>
+  </view>
+  <view class='content'>
+    <view class='contentItem {{seleChecked == 1 ? "checkActive":""}}' bindtap='changChecked' data-checkName="1">
+        <image class='jiaodao' src='{{seleChecked == 1 ? "/img/finger-guessing/jiandaoX.png":"/img/finger-guessing/jiandao.png"}}'></image>
+        <image class='zi_jiandao' src='{{seleChecked == 1 ? "/img/finger-guessing/zi_jiandaoX.png":"/img/finger-guessing/zi_jiandao.png"}}'></image>
+    </view>
+    <view class='contentItem {{seleChecked == 2 ? "checkActive":""}}' bindtap='changChecked' data-checkName="2">
+        <image class='shitou' src='{{seleChecked == 2 ? "/img/finger-guessing/shitouX.png":"/img/finger-guessing/shitou.png"}}'></image>
+        <image class='zi_shitou' src='{{seleChecked == 2 ? "/img/finger-guessing/zi_shitouX.png":"/img/finger-guessing/zi_shitou.png"}}'></image>
+    </view>
+    <view class='contentItem {{seleChecked == 3 ? "checkActive":""}}' bindtap='changChecked' data-checkName="3">
+        <image class='bu' src='{{seleChecked == 3 ? "/img/finger-guessing/buX.png":"/img/finger-guessing/bu.png"}}'></image>
+        <image class='zi_bu' src='{{seleChecked == 3 ? "/img/finger-guessing/zi_buX.png":"/img/finger-guessing/zi_bu.png"}}'></image>
+    </view>
+  </view>
+  <view class='footer'>
+    <button wx:if="{{!isLogin}}" open-type='getUserInfo' class='pkBtn 111' bindgetuserinfo='getUserInfo'>
+      <image src='/img/finger-guessing/btn_pk_small.png'></image>
+    </button>
+    <block wx:else>
+      <button class='pkBtn' bindtap='showModal' style='display:{{seleChecked != 0 ? "none" : "block"}}'>
+      <image src='/img/finger-guessing/btn_pk_small.png'></image>
+    </button>
+    <button class='pkBtn' open-type='share' style='display:{{seleChecked == 0 ? "none" : "block"}}'>
+      <image src='/img/finger-guessing/btn_pk_small.png'></image>
+    </button>
+    </block>
+    
+    <button class='crearePoster' open-type='getUserInfo' bindgetuserinfo='getUserInfo' data-type='1'><image src='/img/finger-guessing/friends-group.png'></image></button>
+    
+  </view>
+</view>
 <canvas wx:if="{{showCanvas}}" canvas-id="mycanvas" class='canvas' 
  style='width:{{width}}px;height:{{height}}px'/>
-
-<button class='crearePoster' open-type='getUserInfo' bindgetuserinfo='getUserInfo'>生成海报</button>
+<!-- 
+<button class='crearePoster' open-type='getUserInfo' bindgetuserinfo='getUserInfo'>生成海报</button> -->
+<view class='modle {{moveClass}}'>
+  <view class='modle-body'>
+  <image class='close' bindtap='closeList' src='/img/finger-guessing/close-sel-punishment-wrap.png'></image>
+    <scroll-view class='srocll' scroll-y>
+       <view  wx:for="{{punishList}}"  wx:key="index" class='item {{seleindex == index? "active":""}}' bindtap='changeSelect' data-selectIndex="{{index}}">{{item.content}}</view>
+    </scroll-view>
+    <image class='btnsubmit' src='/img/finger-guessing/fg-confirm-punishment.png' bindtap='changeLostMes'></image>
+  </view>
+</view>

@@ -79,6 +79,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    wx.showShareMenu({
+      withShareTicket: true
+    })
     this.setData({
       isloading : true
     })
@@ -120,9 +123,12 @@ Page({
     return {
       title: '转发时显示的标题',
       path: '/pages/woodfish/woodfish',
-      complete:function(res){
-        console.log(res);
-      }
+      success:function(res){
+          console.log(res)
+      },
+      // complete:function(res){
+      //   console.log(res);
+      // }
     }
   },
   addScore(){

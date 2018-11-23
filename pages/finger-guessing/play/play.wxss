@@ -3,12 +3,7 @@ page{
   width: 100%;
   height: 100%;
 }
-.crearePoster{
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 3;
-}
+
 .bg{
   width: 100%;
   height: 100%;
@@ -16,8 +11,227 @@ page{
   background-size: 100% 100%;
   position: relative;
   z-index: 2;
+  box-sizing: border-box;
+  padding-top: 15rpx;
 }
 .canvas{
   position: relative;
   z-index: 1;
+}
+.top{
+  width: 750rpx;
+  height: 350rpx;
+   background: url('http://192.168.11.47/playgame/res/img/punishment.png') no-repeat left top;
+   background-size: cover;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.top text{
+  width: 650rpx;
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.more{
+  width: 308rpx;
+  height: 68rpx;
+  position: absolute;
+  left: 221rpx;
+  bottom: -20rpx;
+}
+.modle{
+  width: 750rpx;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 5;
+  background: rgba(0, 0, 0, .3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+}
+.modle-body{
+  width: 708rpx;
+  height: 1054rpx;
+  background: url('http://192.168.11.47/playgame/res/img/sel-punishment.png') no-repeat left top;
+  background-size: 100% 100%;
+  position: relative;
+}
+.srocll{
+  width: 708rpx;
+  height: 870rpx;
+  margin: 100rpx auto 0;
+  box-sizing: border-box;
+  padding-left: 54rpx;
+}
+.item{
+  width: 600rpx;
+  height: 90rpx;
+  background: #ffe7c3;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  line-height: 82rpx;
+  color: #796e7f;
+  border-radius: 10rpx;
+  border: 4rpx solid #c19856;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  margin-bottom: 20rpx;
+}
+.active{
+  background: #fbc67a;
+}
+.btnsubmit{
+  width: 540rpx;
+  height: 98rpx;
+  position: absolute;
+  bottom: -40rpx;
+  left: 84rpx;
+}
+@-webkit-keyframes moveOut{
+  0%{
+    transform: scale3d(1, 1, 1);
+  }
+  100%{
+    transform: scale3d(0, 0, 0);
+  }
+}
+@keyframes moveOut{
+  0%{
+    transform: scale3d(1, 1, 1);
+  }
+  100%{
+    transform: scale3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes moveIn{
+  0%{
+    transform: scale3d(0, 0, 0);
+  }
+  100%{
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes moveIn{
+  0%{
+    transform: scale3d(0, 0, 0);
+  }
+  100%{
+    transform: scale3d(1, 1, 1);
+  }
+}
+.moveOut{
+  animation-name: moveOut;
+  animation-duration: .1s;
+  animation-timing-function:ease-out;
+  animation-fill-mode: forwards;
+}
+.moveIn{
+  animation-name: moveIn;
+  animation-duration: .35s;
+  animation-timing-function:ease-in;
+  animation-fill-mode: forwards;
+}
+.close{
+  position: absolute;
+  right: 0rpx;
+  top: 15rpx;
+  width: 48rpx;
+  height: 48rpx;
+}
+.content{
+  width: 720rpx;
+  height: 522rpx;
+  margin: 60rpx auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contentItem{
+  width: 236rpx;
+  height: 522rpx;
+  background: url('http://192.168.11.47/playgame/res/img/Unchecked.png') no-repeat left top;
+  background-size: 100% 100%;
+}
+.checkActive{
+  background-image: url('http://192.168.11.47/playgame/res/img/checked.png');
+}
+.jiaodao{
+  width: 210rpx;
+  height: 294rpx;
+  display: block;
+  margin: 60rpx auto 0; 
+}
+.zi_jiandao{
+  width: 90rpx;
+  height: 91rpx;
+  display: block;
+  margin: 30rpx auto; 
+}
+.shitou{
+  width: 224rpx;
+  height: 192rpx;
+  display: block;
+  margin: 150rpx auto 0; 
+}
+.zi_shitou{
+  width: 106rpx;
+  height: 73rpx;
+  display: block;
+  margin: 55rpx auto; 
+}
+.bu{
+  width: 210rpx;
+  height: 249rpx;
+  display: block;
+  margin: 100rpx auto 0; 
+}
+.zi_bu{
+  width: 61rpx;
+  height: 76rpx;
+  display: block;
+  margin: 55rpx auto; 
+}
+.footer{
+  width: 720rpx;
+  height: 115rpx;
+  position: absolute;
+  bottom: 25rpx;
+  left: 15rpx;
+}
+.pkBtn{
+  float: left;
+  width: 478rpx;
+  height: 115rpx;
+  padding: 0;
+  background: none;
+}
+.pkBtn image{
+  float: left;
+  width: 478rpx;
+  height: 115rpx;
+}
+.crearePoster{
+  float: right;
+  width: 212rpx;
+  height: 115rpx;
+  padding: 0;
+  background: none;
+}
+.crearePoster>image{
+  float: right;
+  width: 212rpx;
+  height: 115rpx;
 }

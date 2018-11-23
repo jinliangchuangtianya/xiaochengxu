@@ -17,11 +17,40 @@ Page({
     canvasShowAvatarUrl:"",
     canvasUrl: "",
     ewmSrc : "",
-    lostMes : "敲木鱼200下",
+    moveClass:"",
+    lostMes:"敲木鱼200下",
     showCanvas:true,
     bgUrl: "http://192.168.11.47/playgame/res/img/bg2.png",
-    userInfo:null
-    
+    userInfo: app.globalData.userInfo,
+    isLogin:false,
+    seleindex: 2,
+    seleChecked :0,
+    punishList:[
+      {
+        content: '敲木鱼200下'
+      },
+      {
+        content: '内容'
+      }, {
+        content: '内容'
+      }, {
+        content: '内容'
+      }, {
+        content: '内容'
+      }, {
+        content: '内容'
+      }, {
+        content: '内容'
+      }, {
+        content: '内容'
+      }, {
+        content: '内容'
+      }, {
+        content: '内容'
+      }, {
+        content: '内容'
+      },
+    ]
   },
 
   /**
@@ -30,6 +59,9 @@ Page({
   onLoad: function (options) {
     wx.showLoading({
       mask: true
+    })
+    this.setData({
+      isLogin: !!app.globalData.userInfo
     })
     let _this = this;
     wx.getSystemInfo({
@@ -53,26 +85,50 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    wx.showShareMenu({
+      withShareTicket: true
+    })
   },
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
+    return false;
+    return {
+      title: "石头剪刀布",
+      path: "/pages/finger-guessing/play/play",
+      imageUrl: "http://192.168.11.47/playgame/res/img/paiming.png",
+      success:function(res){
 
+      }
+    };
   },
   getUserInfo(res){
     if (app.globalData.userInfo){
-      this.downUserUrl();
+      if (res.currentTarget.dataset.type){
+        this.downUserUrl()
+      }
     }
     else{
       if (res.detail.errMsg == "getUserInfo:ok") {
          app.globalData.userInfo = res.detail.userInfo;
-         this.downUserUrl();
+        this.setData({
+          isLogin: !!app.globalData.userInfo
+        })
+        if (res.currentTarget.dataset.type) {
+          this.downUserUrl()
+        }
       }
     }
   },
   downUserUrl(){
+    if (this.data.seleChecked == 0){
+      wx.showModal({
+        content: "选择招式后才可以生成对战海报",
+        showCancel: false
+      })
+      return;
+    }
     wx.showLoading({
       title: '正在合成海报...',
       mask: true
@@ -173,7 +229,7 @@ Page({
   
     ctx.setFontSize(20);
     ctx.setFillStyle("#000000");
-    let lostMes = "输了的要： " +this.data.lostMes;
+    let lostMes = "输了的要： " + this.data.lostMes;
     let lostMesWidth = 320;
     let lostMesMaxWidth = (ctx.measureText(lostMes).width > lostMesWidth ? lostMesWidth : ctx.measureText(lostMes).width);
     this._drawText(ctx, lostMes, (scale.width - lostMesMaxWidth) / 2, scale.height * 0.72, "", lostMesMaxWidth, lineHeight)
@@ -250,5 +306,39 @@ Page({
         console.log(res);
       }
     });
+  },
+  showList(){
+    this.setData({
+      moveClass: "moveIn"
+    })
+  },
+  closeList() {
+    this.setData({
+      moveClass: ""
+    })
+  },
+  changeSelect(e){
+    this.setData({
+      seleindex: e.currentTarget.dataset.selectindex
+    })
+  },
+  changeLostMes(e) {
+    this.setData({
+      lostMes: this.data.punishList[this.data.seleindex].content
+    })
+    this.setData({
+      moveClass:""
+    })
+  },
+  changChecked(e){
+    this.setData({
+      seleChecked: e.currentTarget.dataset.checkname
+    })
+  },
+  showModal(){
+    wx.showModal({
+      content: "选择招式后才可以发起PK",
+      showCancel: false
+    })
   }
 })

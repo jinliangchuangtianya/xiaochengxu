@@ -1,6 +1,6 @@
 <!--pages/finger-guessing/finger-guessing.wxml-->
-<image bindtap='gotoPlay' class='banner' src='{{avatarUrl}}'></image>
-<view class='title'>
+<image bindtap='gotoPage' class='banner' src='{{avatarUrl}}' data-pageName="play"></image>
+<view class='title' bindtap='gotoPage' data-pageName="sincerity">
   <view class='left'>
     <image src='/img/avatar.jpeg'></image>
     <text>{{nickName}}</text>

@@ -1,0 +1,6 @@
+<!--pages/finger-guessing/pk-scene/pk-scene.wxml-->
+<view class='modle'>
+  <view class='imgWrap'>
+    <image bindtap='upimg' src='{{imgsrc}}' style='width:{{imgSixe.width}}rpx;height:{{imgSixe.height}}rpx'></image>
+  </view>
+</view>

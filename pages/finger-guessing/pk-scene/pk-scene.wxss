@@ -1,0 +1,19 @@
+/* pages/finger-guessing/pk-scene/pk-scene.wxss */
+.modle{
+  width: 750rpx;
+  height: 500rpx;
+  background: url('http://192.168.11.47/playgame/res/img/fg-punish-layer-complete.png') no-repeat left top;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.imgWrap{
+  width: 142rpx;
+  height: 142rpx;
+  margin: 300rpx auto;
+  display: flex;
+  align-items: center;
+  background: black;
+  justify-content: center;
+}

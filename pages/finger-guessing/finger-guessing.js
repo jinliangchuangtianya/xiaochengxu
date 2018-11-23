@@ -119,10 +119,10 @@ Page({
       list: list
     })
   },
-  gotoPlay(){
-    console.log(1111111)
+  gotoPage(e){
+    let page = e.currentTarget.dataset.pagename;
     wx.navigateTo({
-      url: "/pages/finger-guessing/play/play",
+      url: "/pages/finger-guessing/" + page + "/" + page,
     })
   }
 })

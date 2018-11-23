@@ -1,0 +1,135 @@
+/* pages/finger-guessing/sincerity/sincerity.wxss */
+page{
+  background: #f1f1f1;
+}
+.title{
+  width: 750rpx;
+  height: 330rpx;
+}
+.bg{
+  width: 750rpx;
+  height: 268rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.cheng{
+  position: absolute;
+  width: 106rpx;
+  height: 113rpx;
+  z-index: 2;
+  left:322rpx;
+  top:208rpx;
+
+}
+.text{
+  width: 100%;
+  line-height: 50rpx;
+  color: white;
+  z-index: 3;
+  position: absolute;
+  left: 0;
+  top: 70rpx;
+  display: flex;
+  flex-direction: column;
+}
+.text text{
+  width: 100%;
+  text-align: center;
+}
+.text text:nth-of-type(1){
+  font-size: 56rpx;
+}
+.text text:nth-of-type(2){
+  font-size: 30rpx;
+}
+.tips{
+  width: 100%;
+  height: auto;
+  background:white;
+  margin-bottom: 15rpx;
+}
+.tips .top{
+  line-height:120rpx;
+  background-color:white;
+  color:#ef9057;
+  font-size:36rpx;
+  font-weight:bold;
+  padding-left:35rpx;
+  display: block;
+}
+.tips .bottom{
+  line-height:90rpx;
+  font-size:30rpx;
+  color:#999;
+  margin: 0 35rpx;
+  background-color:white;
+  display: block;
+  border-top:1px dashed #f1f1f1;
+}
+.listGroup{
+  width: 750rpx;
+  height: 130rpx;
+  position: relative;
+  margin-bottom: 15rpx;
+}
+.listWrap{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 850rpx;
+  height: 130rpx;
+  display: flex;
+  justify-content: space-between; 
+}
+.list{
+  width: 720rpx;
+  height: 130rpx;
+  margin: 0 15rpx 15rpx 15rpx;
+  background: white;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 15rpx;
+}
+.list image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.list>view{
+  height: 80rpx;
+  width: 500rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 15rpx;
+}
+.infoTitle{
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.infoText{
+  font-size: 26rpx;
+  color: #999;
+}
+.time{
+  font-size: 24rpx;
+  color: #999;
+  position: relative;
+  top: -20rpx;
+}
+.dele{
+  width: 100rpx;
+  height: 130rpx;
+  line-height: 130rpx;
+  text-align: center;
+  color: red;
+  font-size: 30rpx;
+  background: white;
+  border-radius: 10rpx;
+}

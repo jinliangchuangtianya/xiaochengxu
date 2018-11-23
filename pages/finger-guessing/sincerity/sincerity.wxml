@@ -1,0 +1,24 @@
+<!--pages/finger-guessing/sincerity/sincerity.wxml-->
+<view class='title'>
+  <image class='bg' src='/img/finger-guessing/fg_chengxindu_hd.png'></image>
+  <image class='cheng' src='/img/finger-guessing/icon-chengxin-big.png'></image>
+  <view class='text'>
+    <text>{{cxd}}%</text>
+    <text>诚信度</text>
+  </view>
+</view>
+<view class='tips'>
+  <text class='top'>高度诚信，更能获得朋友的信任</text>
+  <text class='bottom'>你有{{num}}场对战没有完成惩罚</text>
+</view>
+<view class='listGroup' wx:for="{{list}}" wx:key="index">
+  <view class='listWrap' bindtap='' data-index="{{index}}">
+    <view class='list'>
+      <view class='info'>
+        <text class='infoTitle'>{{item.title}}</text>
+        <text class='infoText'>惩罚：{{item.mes}}</text>
+      </view>
+      <text class='time'>{{item.time}}</text>
+    </view>
+  </view>
+  </view>

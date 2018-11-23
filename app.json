@@ -1,8 +1,9 @@
 {
   "pages": [
-   
-    "pages/finger-guessing/play/play",
+    "pages/finger-guessing/pk-scene/pk-scene",
+    "pages/finger-guessing/sincerity/sincerity",
     "pages/finger-guessing/finger-guessing",
+    "pages/finger-guessing/play/play",
     "pages/index/index",
     "pages/truewords/truewords",
     "pages/dice/dice",
